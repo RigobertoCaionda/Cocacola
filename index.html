@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coca-cola</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</head>
+<body onclick="targetEvent(event);" onscroll="diminuirLogo();">
+	<header>
+		<div class="cabecalho">
+		<div class="menuLeft">
+			<img src="assets/images/menu.png" onclick="expandirMenu();">
+			<span onclick="expandirMenu();" class="palavraMenu">Menu</span>
+		</div>
+		<div class="menuRight">
+			<i class="fas fa-user-circle"></i>
+			<button class="search"><i class="fas fa-search" onclick="expandir();" id="search"></i></button>
+			<form method="GET" id="form">
+				<input type="text" name="" placeholder="pesquisa">
+				<button type="submit" class="submit"><i class="fas fa-chevron-right"></i></button>
+			</form>
+			<i class="fas fa-times" id="fechar" onclick="fechar();"></i>
+		</div>
+
+		<div class="logo">CocaCola</div>
+	</div>
+	<div class="menu" id="menu">
+		<nav>
+			<ul>
+				<li class="x" onclick="fecharMenu();">X</li>
+				<li class="cinza">Editar perfil</li>
+				<li class="redes-sociais-titulo cinza">COCA-COLA NAS REDES SOCIAIS</li>
+				<li class="social--icons">
+					<div class="social--icons--div">
+						<div class="divInterna facebook">
+							<a href=""><i class="fab fa-facebook"></i></a>
+						</div>
+						<div class="divInterna twiiter">
+							<a href=""><i class="fab fa-twitter"></i></a>
+						</div>
+						<div class="divInterna youtube">
+							<a href=""><i class="fab fa-youtube"></i></a>
+						</div>
+						<div class="divInterna instagram">
+							<a href=""><i class="fab fa-instagram"></i></a>
+						</div>
+					</div>
+				</li>
+				<li class="outros-sites-titulo cinza">OUTROS SITES COCA-COLA QUE TE PODEM INTERESSAR</li>
+				<a href=""><li>Natal | Coca-Cola</li></a>
+				<a href=""><li>Coca-Cola Meals</li></a>
+				<a href=""><li>Coca-Cola Energy</li></a>
+				<a href=""><li class="vermelho">Abertos para melhor</li></a>
+				<a href=""><li class="vermelho">Somos Abertos | Coca-Cola</li></a>
+				<a href=""><li class="vermelho">#JuntosSabeMelhor</li></a>
+				<a href=""><li class="vermelho">Produtos</li></a>
+				<a href=""><li class="vermelho">Conhecer-nos melhor</li></a>
+				<a href=""><li class="vermelho">Perguntas e Respostas</li></a>
+				<a href=""><li>Katy Perry & Aitana com Coca-Cola</li></a>
+			</ul>
+		</nav>
+	</div>
+		
+	</header>
+		<div class="video">
+		<iframe width="100%" height="943" src="https://www.youtube.com/embed/jx-AlCtvaLY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+</body>
+</html>
