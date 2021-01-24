@@ -1,55 +1,72 @@
 function expandir(){
-	let form = document.getElementById("form");
-	let fechar = document.getElementById("fechar");
 	let search = document.getElementById("search");
-	form.style.display='block';
-	fechar.style.display='block';
+	let faTimes = document.querySelector(".menuRight .fas.fa-times");
+	faTimes.style.marginRight = "0";
 	search.style.cursor = 'default';
 }
 function fechar(){
-	let form = document.getElementById("form");
-	let fechar = document.getElementById("fechar");
+	let faTimes = document.querySelector(".menuRight .fas.fa-times");
 	let search = document.getElementById("search");
-	form.style.display='none';
-	fechar.style.display='none';
+	if(document.querySelector("body").clientWidth > 767 && document.querySelector("body").
+		clientWidth < 1024){
+		faTimes.style.marginRight = "-263px";
+	}else if(document.querySelector("body").clientWidth >= 1024){
+		faTimes.style.marginRight = "-382px";
+	}else if(document.querySelector("body").clientWidth >=321 && document.querySelector("body").
+		clientWidth < 768){
+		faTimes.style.marginRight = "-130px";
+	}else if(document.querySelector("body").clientWidth < 321){
+		faTimes.style.marginRight = "-131px";
+	}
 	search.style.cursor = 'pointer';
 }
 function expandirMenu(){
 	let menu = document.getElementById("menu");
-	menu.style.display='block';
+	let logo = document.querySelector(".logo");
+	if(menu.style.marginLeft=='-700px'){
+		menu.style.marginLeft='0';
+		logo.style.opacity=0.3;
+	}else{
+		menu.style.marginLeft='-700px';
+		logo.style.opacity=1;
+	}
 }
 
 function fecharMenu(){
-	document.getElementById("menu").style.display='none';
+	let logo = document.querySelector(".logo");
+	logo.style.opacity=1;
+	document.getElementById("menu").style.marginLeft='-700px';
 }
 function targetEvent(event) {
 	if(event.target.nodeName != "IMG" && event.target.nodeName != "SPAN"){
 		let menu = document.getElementById("menu");
-		menu.style.display='none';
+		let logo = document.querySelector(".logo");
+		menu.style.marginLeft='-700px';
+		logo.style.opacity=1;
 	}
-	/*O event.target.NodeName mostra quem fez o evento ser disparado e o event.cuurentTarget.nodeName
-	mostra onde foi colocada a funcao que chamou o evento, ou seja, quem e o pai do evento.
-	*/
+	
 }
 
-function diminuirLogo(){
+function scroll(){
 	let logo = document.querySelector('.logo');
+	let menuLeft = document.querySelector('.menuLeft');
 	let cabecalho = document.querySelector('.cabecalho');
 	let icones = document.querySelector('.cabecalho .menuRight i');
 	let search = document.querySelector('.search i');
-	let video = document.querySelector('.video');
 	let palavraMenu = document.querySelector('.palavraMenu');
 	let fechar = document.getElementById("fechar");
+	let menu = document.querySelector(".menu");
+	let searchX = document.querySelector(".cabecalho .menuRight .search");
+	searchX.style.borderLeft="1px solid #000";
+	menu.style.marginLeft="-700px";
 	fechar.style.color="#000";
 	palavraMenu.style.color="#000";
-	video.style.top=160+"px";
 	search.style.color="#000";
 	icones.style.color="#000";
-	cabecalho.style.height=160+"px";
 	cabecalho.style.backgroundColor="#d3d3d3";
-	cabecalho.style.opacity=0.5;
-	logo.style.width = 140+"px";
-	logo.style.height= 140+"px";
-	logo.style.lineHeight=140+"px";
-	logo.style.fontSize=18+"px";
+	menuLeft.style.opacity=0.5;
+	logo.style.width = 120+"px";
+	logo.style.height= 120+"px";
+	logo.style.lineHeight=120+"px";
+	logo.style.fontSize=17+"px";
 }
